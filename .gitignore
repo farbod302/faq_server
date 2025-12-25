@@ -6,3 +6,4 @@ questions_hash.txt
 questions_indices_hash.json
 *.md
 package-lock.json
+.env
