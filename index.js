@@ -8,7 +8,7 @@ const { createChat, continueChat, getChat } = require('./chat_bot');
 require('dotenv').config();
 const https = require('https');
 const app = express();
-const PORT = 3000;
+const PORT = 3456;
 const QUESTIONS_FILE = path.join(__dirname, 'questions.json');
 
 // Middleware برای پارس کردن JSON
