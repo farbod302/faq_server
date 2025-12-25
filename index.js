@@ -1,5 +1,6 @@
 const express = require('express');
 const fs = require('fs').promises;
+const fsSync = require('fs');
 const path = require('path');
 const { generateKeywords } = require('./add_keywords');
 const { initializeRAG, searchSimilarQuestions, refreshRAG } = require('./rag_handler');
@@ -16,8 +17,8 @@ const cors = require('cors');
 app.use(cors());
 
 const config = {
-  key: fs.readFileSync("/etc/letsencrypt/live/srv1.sallamschool.org/privkey.pem"),
-  cert: fs.readFileSync("/etc/letsencrypt/live/srv1.sallamschool.org/fullchain.pem")
+  key: fsSync.readFileSync("/etc/letsencrypt/live/srv1.sallamschool.org/privkey.pem"),
+  cert: fsSync.readFileSync("/etc/letsencrypt/live/srv1.sallamschool.org/fullchain.pem")
 }
 
 /**
